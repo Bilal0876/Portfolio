@@ -10,10 +10,9 @@ export default function Portfolio() {
 
      const skills = {
           frontend: ['React', 'HTML', 'CSS', 'JavaScript'],
-          backend: ['Node.js', 'Express', 'supabse', 'Python', 'C++', 'C'],
+          backend: ['Node.js', 'Express', 'Supabase', 'Python', 'C++', 'C'],
           ai: ['Whisper', 'Faster Whisper', 'Pyannote', 'STT', 'Translation Models'],
           databases: ['PostgreSQL', 'MySQL'],
-
      };
 
      const certifications = [
@@ -31,9 +30,10 @@ export default function Portfolio() {
      return (
           <>
                <style>{`
-        * {
+        *, *::before, *::after {
+          box-sizing: border-box;
           margin: 0;
-                  
+          padding: 0;
         }
 
         body {
@@ -41,10 +41,13 @@ export default function Portfolio() {
           background: linear-gradient(to bottom right, #0f172a, #581c87, #0f172a);
           color: white;
           overflow-x: hidden;
-          
+          width: 100%;
         }
 
+        /* ── NAV ─────────────────────────────────────────── */
         .nav {
+          position: sticky;
+          top: 0;
           width: 100%;
           background: rgba(15, 23, 42, 0.8);
           backdrop-filter: blur(12px);
@@ -53,6 +56,7 @@ export default function Portfolio() {
         }
 
         .nav-container {
+          max-width: 72rem;
           margin: 0 auto;
           padding: 1rem 1.5rem;
           display: flex;
@@ -67,11 +71,14 @@ export default function Portfolio() {
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
+          white-space: nowrap;
         }
 
         .nav-links {
           display: flex;
           gap: 1.5rem;
+          flex-wrap: wrap;
+          justify-content: flex-end;
         }
 
         .nav-button {
@@ -82,6 +89,7 @@ export default function Portfolio() {
           font-size: 1rem;
           text-transform: capitalize;
           transition: color 0.3s;
+          white-space: nowrap;
         }
 
         .nav-button:hover,
@@ -89,18 +97,31 @@ export default function Portfolio() {
           color: #c084fc;
         }
 
+        /* ── SHARED SECTION WRAPPER ──────────────────────── */
         .section {
           display: flex;
           align-items: center;
           justify-content: center;
-          padding: 2rem 0rem;
+          padding: 2rem 1.5rem;
+          width: 100%;
+          scroll-margin-top: 65px;
         }
 
+        /* All inner containers share the same max-width and are full-width on mobile */
+        .section-container,
+        .section-container-wide,
+        .contact-content {
+          width: 100%;
+          max-width: 72rem;
+        }
+
+        /* ── HERO ────────────────────────────────────────── */
         .hero-content {
           text-align: center;
           opacity: 0;
           transform: translateY(2.5rem);
           animation: fadeInUp 1s forwards;
+          width: 100%;
         }
 
         @keyframes fadeInUp {
@@ -139,6 +160,7 @@ export default function Portfolio() {
           display: flex;
           gap: 1rem;
           justify-content: center;
+          flex-wrap: wrap;
           margin-bottom: 3rem;
         }
 
@@ -180,27 +202,11 @@ export default function Portfolio() {
         }
 
         @keyframes bounce {
-          0%, 100% {
-            transform: translateY(0);
-          }
-          50% {
-            transform: translateY(-10px);
-          }
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-10px); }
         }
 
-        .section-container {
-          
-          max-width: 64rem;
-          width: 100%;
-          max-width: 72rem;
-        }
-
-        .section-container-wide {
-          max-width: 72rem;
-          width: 100%;
-          
-        }
-
+        /* ── SECTION TITLES ──────────────────────────────── */
         .section-title {
           font-size: 2.25rem;
           font-weight: bold;
@@ -214,8 +220,10 @@ export default function Portfolio() {
           width: 32px;
           height: 32px;
           color: #c084fc;
+          flex-shrink: 0;
         }
 
+        /* ── ABOUT CARD ──────────────────────────────────── */
         .card {
           background: rgba(30, 41, 59, 0.5);
           backdrop-filter: blur(4px);
@@ -241,7 +249,7 @@ export default function Portfolio() {
 
         .certifications-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
           gap: 0.75rem;
         }
 
@@ -261,6 +269,7 @@ export default function Portfolio() {
           flex-shrink: 0;
         }
 
+        /* ── PROJECT CARD ────────────────────────────────── */
         .project-card {
           background: linear-gradient(to bottom right, rgba(30, 41, 59, 0.8), rgba(88, 28, 135, 0.2));
           backdrop-filter: blur(4px);
@@ -310,6 +319,7 @@ export default function Portfolio() {
         .bullet {
           color: #c084fc;
           margin-top: 0.25rem;
+          flex-shrink: 0;
         }
 
         .tech-tags {
@@ -326,9 +336,10 @@ export default function Portfolio() {
           border: 1px solid rgba(168, 85, 247, 0.3);
         }
 
+        /* ── SKILLS ──────────────────────────────────────── */
         .skills-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
           gap: 1.5rem;
         }
 
@@ -373,9 +384,8 @@ export default function Portfolio() {
           transform: scale(1.05);
         }
 
+        /* ── CONTACT ─────────────────────────────────────── */
         .contact-content {
-          max-width: 42rem;
-          width: 100%;
           text-align: center;
         }
 
@@ -396,6 +406,7 @@ export default function Portfolio() {
           justify-content: center;
           gap: 1.5rem;
           margin-bottom: 3rem;
+          flex-wrap: wrap;
         }
 
         .social-link {
@@ -430,30 +441,47 @@ export default function Portfolio() {
           margin-top: 0.5rem;
         }
 
+        /* ── FOOTER ──────────────────────────────────────── */
         footer {
-          max-width: 100%;
+          width: 100%;
           background: rgba(15, 23, 42, 0.5);
           border-top: 1px solid rgba(168, 85, 247, 0.2);
-          padding: 2rem;
+          padding: 2rem 1.5rem;
           text-align: center;
           color: #9ca3af;
         }
 
-        @media (max-width: 768px) {
+        /* ── MOBILE ──────────────────────────────────────── */
+        @media (max-width: 640px) {
           .hero-title {
-            font-size: 2.5rem;
+            font-size: 2rem;
+          }
+
+          .hero-subtitle {
+            font-size: 1.1rem;
           }
 
           .nav-links {
-            gap: 1rem;
+            gap: 0.6rem;
           }
 
           .nav-button {
-            font-size: 0.875rem;
+            font-size: 0.8rem;
           }
 
-          .section {
-            padding: 3rem 1rem;
+          .section-title {
+            font-size: 1.75rem;
+          }
+
+          .project-title {
+            font-size: 1.4rem;
+          }
+
+          .card,
+          .project-card,
+          .skill-card,
+          .contact-card {
+            padding: 1.25rem;
           }
         }
       `}</style>
@@ -546,13 +574,10 @@ export default function Portfolio() {
                               Featured Project
                          </h2>
                          <div className="project-card">
-                              <h3 className="project-title">
-                                   Automated Trial Log
-                              </h3>
+                              <h3 className="project-title">Automated Trial Log</h3>
                               <p className="project-description">
                                    A comprehensive web-based courtroom transcription and case management system featuring AI capabilities for real-time speech processing and analysis.
                               </p>
-
                               <div>
                                    <h4 className="features-title">Key Features</h4>
                                    <ul className="features-list">
@@ -574,15 +599,14 @@ export default function Portfolio() {
                                         </li>
                                         <li>
                                              <span className="bullet">▹</span>
-                                             <span><strong>User authentication:</strong> Controlled login system with role permissions for structured case access</span>
+                                             <span><strong>User Authentication:</strong> Controlled login system with role permissions for structured case access</span>
                                         </li>
                                    </ul>
                               </div>
-
                               <div>
                                    <h4 className="features-title">Technologies Used</h4>
                                    <div className="tech-tags">
-                                        {['React', 'Node.js', 'Express', 'Python', 'PostgreSQL', 'Faster Whisper', 'Pyannote', 'supabase'].map((tech) => (
+                                        {['React', 'Node.js', 'Express', 'Python', 'PostgreSQL', 'Faster Whisper', 'Pyannote', 'Supabase'].map((tech) => (
                                              <span key={tech} className="tech-tag">{tech}</span>
                                         ))}
                                    </div>
@@ -609,9 +633,7 @@ export default function Portfolio() {
                                         </h3>
                                         <div className="skill-tags">
                                              {items.map((skill) => (
-                                                  <span key={skill} className="skill-tag">
-                                                       {skill}
-                                                  </span>
+                                                  <span key={skill} className="skill-tag">{skill}</span>
                                              ))}
                                         </div>
                                    </div>
