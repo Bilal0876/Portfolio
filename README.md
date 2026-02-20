@@ -5,5 +5,4 @@ A modern, responsive, single-page React portfolio showcasing my skills, projects
 🔗 Live Demo
 
 View Portfolio
-
-(Replace with your GitHub Pages or deployed URL)
+https://bilal0876.github.io/Portfolio/
