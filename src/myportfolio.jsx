@@ -56,7 +56,7 @@ export default function Portfolio() {
         }
 
         .nav-container {
-          max-width: 72rem;
+          max-width: 100%;
           margin: 0 auto;
           padding: 1rem 1.5rem;
           display: flex;
@@ -482,6 +482,7 @@ export default function Portfolio() {
           .skill-card,
           .contact-card {
             padding: 1.25rem;
+            
           }
         }
       `}</style>
@@ -677,7 +678,7 @@ export default function Portfolio() {
 
                {/* Footer */}
                <footer>
-                    <p>© 2026 Portfolio. Built with React & CSS</p>
+                    <p>© 2026 Bilal. Built with React & CSS</p>
                </footer>
           </>
      );
