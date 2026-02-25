@@ -9,8 +9,8 @@ export default function Portfolio() {
      }, []);
 
      const skills = {
-          frontend: ['React', 'HTML', 'CSS', 'JavaScript'],
-          backend: ['Node.js', 'Express', 'Supabase', 'Python', 'C++', 'C'],
+          frontend: ['React', 'Bootstrap', 'HTML', 'CSS', 'JavaScript'],
+          backend: ['Node.js', 'Express', 'Supabase', 'Python', 'C#'],
           ai: ['Whisper', 'Faster Whisper', 'Pyannote', 'STT', 'Translation Models'],
           databases: ['PostgreSQL', 'MySQL'],
      };
