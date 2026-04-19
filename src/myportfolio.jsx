@@ -27,6 +27,79 @@ const TTS = <svg viewBox="0 0 24 24" width="26" height="26"><rect width="24" hei
 const TCSharp = <svg viewBox="0 0 24 24" width="26" height="26"><rect width="24" height="24" rx={4} fill="#239120" stroke="#111" strokeWidth="1.5" /><text x="12" y="18" textAnchor="middle" fontSize="9.5" fontWeight="800" fill="#fff" fontFamily="system-ui">C#</text></svg>;
 const TPython = <svg viewBox="0 0 24 24" width="26" height="26"><path d="M12 2c-2.5 0-4.5 1.1-4.5 3.5v2h9v1H5.5C3.6 8.5 2 10 2 13c0 2.5 1.3 4 3.5 4H7v-2.5C7 12 8.8 10.5 12 10.5s5 1.5 5 4V17h-9v1h10.5c2.2 0 3.5-1.8 3.5-4 0-2.5-1.5-4.5-3.5-4.5H16.5V12c0-2.5-1.8-4-4.5-4zm-1.5 2a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm3 13a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" fill="#3776AB" /></svg>;
 
+/* Briefcase icon for internship */
+const IcoBriefcase = ({ size = 22 }) => (
+     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+          <rect x="2" y="7" width="20" height="14" rx="2" />
+          <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
+          <line x1="12" y1="12" x2="12" y2="16" />
+          <line x1="10" y1="14" x2="14" y2="14" />
+     </svg>
+);
+/* Graduation cap icon for education */
+const IcoGradCap = ({ size = 22 }) => (
+     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+          <polygon points="12 2 22 8.5 12 15 2 8.5 12 2" />
+          <path d="M6 11.5v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5" />
+     </svg>
+);
+/* Wallet/money icon for Split Sync */
+const IcoWallet = ({ size = 38 }) => (
+     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M20 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z" />
+          <path d="M16 3H8a2 2 0 0 0-2 2v2h12V5a2 2 0 0 0-2-2z" />
+          <circle cx="16" cy="13" r="1.5" fill="#fff" stroke="none" />
+     </svg>
+);
+/* Mic icon for transcription */
+const IcoMic = ({ size = 38 }) => (
+     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <rect x="9" y="2" width="6" height="11" rx="3" />
+          <path d="M19 10a7 7 0 0 1-14 0" />
+          <line x1="12" y1="19" x2="12" y2="22" />
+          <line x1="8" y1="22" x2="16" y2="22" />
+     </svg>
+);
+/* Globe/translate icon */
+const IcoGlobe = ({ size = 38 }) => (
+     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="12" cy="12" r="10" />
+          <line x1="2" y1="12" x2="22" y2="12" />
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+     </svg>
+);
+/* Medal icon for certs */
+const IcoMedal = ({ size = 28 }) => (
+     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="12" cy="14" r="7" />
+          <path d="M8.5 2.5l-2 4.5h11l-2-4.5" />
+          <text x="12" y="18" textAnchor="middle" fontSize="7" fontWeight="900" fill="currentColor" stroke="none" fontFamily="system-ui">1st</text>
+     </svg>
+);
+/* Git branch / version control */
+const IcoGitBranch = ({ size = 28 }) => (
+     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <line x1="6" y1="3" x2="6" y2="15" />
+          <circle cx="18" cy="6" r="3" />
+          <circle cx="6" cy="18" r="3" />
+          <path d="M18 9a9 9 0 0 1-9 9" />
+     </svg>
+);
+/* Code icon for JS cert */
+const IcoCode = ({ size = 28 }) => (
+     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <polyline points="16 18 22 12 16 6" />
+          <polyline points="8 6 2 12 8 18" />
+     </svg>
+);
+/* Stack icon for fullstack cert */
+const IcoStack = ({ size = 28 }) => (
+     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <polygon points="12 2 22 8.5 12 15 2 8.5 12 2" />
+          <polyline points="2 13.5 12 20 22 13.5" />
+     </svg>
+);
+
 const NAV_LINKS = ["About", "Skills", "Projects", "Experience", "Contact"];
 
 const SKILLS = {
@@ -74,7 +147,7 @@ const PROJECTS = [
           cat: ["fullstack", "backend"],
           color: "#FF6B6B", shadowColor: "#c94f4f",
           accent: "#FFE66D",
-          icon: "💸",
+          icon: <IcoWallet />,
           tags: ["React", "Node.js", "PostgreSQL", "Prisma", "JWT"],
           title: "Split Sync",
           desc: "Collaborative expense settlement app with a greedy algorithm that minimises total transactions. MVC architecture with JWT + HttpOnly cookies.",
@@ -85,7 +158,7 @@ const PROJECTS = [
           cat: ["fullstack", "ai"],
           color: "#4ECDC4", shadowColor: "#2fa89f",
           accent: "#FFE66D",
-          icon: "🎙️",
+          icon: <IcoMic />,
           tags: ["React", "WebSockets", "Faster-Whisper", "Pyannote", "Supabase"],
           title: "AI Judicial Transcription",
           desc: "Real-time multilingual courtroom transcription with speaker diarization. Role-based access for judges, admins & stenographers.",
@@ -96,7 +169,7 @@ const PROJECTS = [
           cat: ["backend", "ai"],
           color: "#A8E6CF", shadowColor: "#5db88d",
           accent: "#FF6B6B",
-          icon: "🌐",
+          icon: <IcoGlobe />,
           tags: ["Python", "Flask", "Opus MT"],
           title: "Language Translator",
           desc: "Multilingual translation web app powered by Opus MT neural machine translation models. Clean Flask interface enabling cross-language text translation.",
@@ -109,7 +182,7 @@ const TIMELINE = [
      {
           date: "Feb 2026 – Present", type: "Internship", color: "#FF6B6B",
           role: "Full Stack Development Intern", company: "Qubit Lab Inc.",
-          icon: "💼",
+          icon: <IcoBriefcase />,
           points: [
                "Built responsive UI components with React, Tailwind CSS, and shadcn/ui.",
                "Implemented JWT authentication with HttpOnly cookies.",
@@ -120,7 +193,7 @@ const TIMELINE = [
      {
           date: "2022 – Feb 2026", type: "Education", color: "#4ECDC4",
           role: "BS Computer Science", company: "University of Central Punjab, Lahore",
-          icon: "🎓",
+          icon: <IcoGradCap />,
           points: [
                "Major: Software Development — full-stack engineering & system design.",
                "Minor: ML/Deep Learning — neural networks, model training, AI integrations.",
@@ -313,14 +386,23 @@ export default function Portfolio() {
                {/* ── HERO ─────────────────────────────────────────────── */}
                <section id="hero" className="min-h-screen flex items-center pt-20 relative overflow-hidden">
                     {/* BG blobs */}
-                    <div className="absolute top-20 right-8 w-72 h-72 rounded-full opacity-40 float" style={{ background: "#FF6B6B", zIndex: 0 }} />
+                    <div className="absolute top-20 right-8 w-72 h-72 rounded-full opacity-40 float" style={{ background: "#FFD93D", zIndex: 0 }} />
                     <div className="absolute bottom-24 left-4 w-48 h-48 rounded-full opacity-30" style={{ background: "#4ECDC4", zIndex: 0 }} />
                     <div className="absolute top-40 left-1/3 w-20 h-20 rounded-full opacity-20" style={{ background: "#FFE66D", zIndex: 0 }} />
 
                     {/* Stars */}
-                    {["top-32 left-16", "top-60 right-60", "bottom-40 left-1/3", "top-1/2 right-16"].map((pos, i) => (
-                         <div key={i} className={`star-deco ${pos}`} style={{ animationDelay: `${i * 0.4}s`, animation: `wiggle ${2 + i * 0.3}s ease-in-out infinite` }}>
-                              <svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2l2.4 7H22l-6.2 4.5 2.4 7L12 16 5.8 20.5l2.4-7L2 9h7.6z" fill="#FFE66D" stroke="#111" strokeWidth="2" /></svg>
+                    {[
+                         { top: "65px", left: "46px", right: "auto", bottom: "auto", rotate: "rotate(0deg)" },
+                         { top: "120px", left: "auto", right: "16px", bottom: "auto", rotate: "rotate(15deg)" },
+                         { top: "80%", left: "63%", right: "auto", bottom: "80px", rotate: "rotate(-10deg)" },
+                         { top: "52%", left: "auto", right: "48px", bottom: "auto", rotate: "rotate(20deg)" },
+                    ].map(({ rotate, ...pos }, i) => (
+                         <div key={i} className="star-deco" style={{ top: pos.top, left: pos.left, right: pos.right, bottom: pos.bottom, transform: rotate }}>
+                              <div style={{ animationDelay: `${i * 0.4}s`, animation: `wiggle ${2 + i * 0.3}s ease-in-out infinite` }}>
+                                   <svg width="24" height="24" viewBox="0 0 24 24">
+                                        <path d="M12 2l2.4 7H22l-6.2 4.5 2.4 7L12 16 5.8 20.5l2.4-7L2 9h7.6z" fill="#FFE66D" stroke="#111" strokeWidth="2" />
+                                   </svg>
+                              </div>
                          </div>
                     ))}
 
@@ -332,7 +414,7 @@ export default function Portfolio() {
                                         <div className="relative inline-block px-5 py-2 border-[3px] border-black rounded-2xl bg-white font-black text-sm"
                                              style={{ boxShadow: "4px 4px 0 #111" }}>
                                              <span className="w-2 h-2 rounded-full bg-green-400 inline-block mr-2 border border-black" />
-                                             Available for hire ✌️
+                                             Available for hire
                                              <div className="absolute -bottom-3 left-6 w-4 h-4 bg-white border-b-[3px] border-r-[3px] border-black"
                                                   style={{ transform: "rotate(45deg)", zIndex: -1 }} />
                                         </div>
@@ -346,7 +428,7 @@ export default function Portfolio() {
 
                                    <div className="inline-block px-5 py-2 rounded-2xl border-[3px] border-black mb-6 font-black text-lg"
                                         style={{ background: "#FFE66D", boxShadow: "4px 4px 0 #111" }}>
-                                        Full Stack Developer 🚀
+                                        Full Stack Developer
                                    </div>
 
                                    <p className="font-bold text-base mb-8 max-w-md leading-relaxed" style={{ color: "#444" }}>
@@ -418,13 +500,16 @@ export default function Portfolio() {
                                    {/* Trait cards */}
                                    <div className="grid grid-cols-2 gap-4">
                                         {[
-                                             { emoji: "🧠", title: "Problem Solver", desc: "Greedy algorithms to settlement engines — elegant solutions first.", color: "#FFE66D" },
-                                             { emoji: "🔒", title: "Security-First", desc: "JWT, HttpOnly cookies, Helmet, rate limiting — security by default.", color: "#FF6B6B" },
-                                             { emoji: "⚡", title: "Fast Learner", desc: "From React to real-time WebSockets in one project cycle.", color: "#4ECDC4" },
-                                             { emoji: "🤝", title: "Team Player", desc: "Git workflows, branching, and collaborative code review.", color: "#A8E6CF" },
-                                        ].map(({ emoji, title, desc, color }) => (
+                                             { icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M9.5 2A6.5 6.5 0 0 1 16 8.5c0 3.58-2.92 6.5-6.5 6.5A6.5 6.5 0 0 1 3 8.5 6.5 6.5 0 0 1 9.5 2z" /><path d="M21 21l-4.35-4.35" /><path d="M9.5 8.5h.01M12 6.5l-2.5 2 1 2.5" /></svg>, title: "Problem Solver", desc: "Greedy algorithms to settlement engines — elegant solutions first.", color: "#FFE66D" },
+
+                                             { icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>, title: "Security-First", desc: "JWT, HttpOnly cookies, Helmet, rate limiting — security by default.", color: "#FF6B35" },
+
+                                             { icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>, title: "Fast Learner", desc: "From React to real-time WebSockets in one project cycle.", color: "#4ECDC4" },
+
+                                             { icon: <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="9" cy="7" r="4" /><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /><path d="M21 21v-2a4 4 0 0 0-3-3.85" /></svg>, title: "Team Player", desc: "Git workflows, branching, and collaborative code review.", color: "#A8E6CF" },
+                                        ].map(({ icon, title, desc, color }) => (
                                              <div key={title} className="cartoon-card p-5" style={{ background: color }}>
-                                                  <div className="text-3xl mb-3">{emoji}</div>
+                                                  <div className="text-3xl mb-3">{icon}</div>
                                                   <h3 className="font-fredoka text-base mb-1">{title}</h3>
                                                   <p className="text-xs font-semibold leading-relaxed opacity-80">{desc}</p>
                                              </div>
@@ -617,12 +702,12 @@ export default function Portfolio() {
                                    </h2>
                                    <div className="grid gap-4" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))" }}>
                                         {[
-                                             { emoji: "🏅", title: "The Full Stack", org: "Meta" },
-                                             { emoji: "📌", title: "Version Control", org: "Meta" },
-                                             { emoji: "⚡", title: "Programming with JavaScript", org: "Meta" },
+                                             { icon: <IcoStack size={28} />, title: "The Full Stack", org: "Meta" },
+                                             { icon: <IcoGitBranch size={28} />, title: "Version Control", org: "Meta" },
+                                             { icon: <IcoCode size={28} />, title: "Programming with JavaScript", org: "Meta" },
                                         ].map(c => (
                                              <div key={c.title} className="cartoon-card p-5 flex items-center gap-4" style={{ background: "#fff" }}>
-                                                  <span className="text-3xl">{c.emoji}</span>
+                                                  <span className="text-3xl">{c.icon}</span>
                                                   <div>
                                                        <h4 className="font-black text-sm mb-0.5">{c.title}</h4>
                                                        <p className="text-xs font-bold text-black/50">{c.org}</p>
@@ -645,7 +730,7 @@ export default function Portfolio() {
                          <Reveal>
                               <div className="section-label" style={{ background: "#FFE66D", color: "#111" }}>Get In Touch</div>
                               <h2 className="font-fredoka mb-3" style={{ fontSize: "clamp(2rem,5vw,3.5rem)", color: "#fff", WebkitTextStroke: "2px #111" }}>
-                                   Let's Connect! 👋
+                                   Let's Connect!
                               </h2>
                               <p className="font-black text-base text-white/80 mb-12 max-w-md">
                                    Have a project in mind or want to chat about opportunities? I'd love to hear from you.
@@ -682,7 +767,7 @@ export default function Portfolio() {
                <footer className="py-10 px-6 border-t-[3px] border-black" style={{ background: "#111" }}>
                     <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
                          <div className="font-fredoka text-xl" style={{ color: "#FFE66D" }}>Bilal<span style={{ color: "#FF6B6B" }}>.</span>dev</div>
-                         <p className="font-black text-xs text-white/40">© 2026 Muhammad Bilal · Crafted with ♥ in Lahore, Pakistan</p>
+                         <p className="font-black text-xs text-white/40">© 2026 Muhammad Bilal Khadim</p>
                          <div className="flex gap-3">
                               {[
                                    { icon: <IconMail size={18} />, href: "mailto:m.bilal0876@gmail.com" },
