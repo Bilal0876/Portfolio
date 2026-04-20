@@ -392,15 +392,18 @@ export default function Portfolio() {
 
                     {/* Stars */}
                     {[
-                         { top: "65px", left: "46px", right: "auto", bottom: "auto", rotate: "rotate(0deg)" },
-                         { top: "120px", left: "auto", right: "16px", bottom: "auto", rotate: "rotate(15deg)" },
-                         { top: "80%", left: "63%", right: "auto", bottom: "80px", rotate: "rotate(-10deg)" },
-                         { top: "52%", left: "auto", right: "48px", bottom: "auto", rotate: "rotate(20deg)" },
-                    ].map(({ rotate, ...pos }, i) => (
+                         { top: "50px", left: "46px", right: "auto", bottom: "auto", rotate: "rotate(0deg)", symbol: "#", fill: "#00FF94", fs: 28 },
+                         { top: "120px", left: "auto", right: "16px", bottom: "auto", rotate: "rotate(15deg)", symbol: "</>", fill: "#FF4500", fs: 20 },
+                         { top: "80%", left: "63%", right: "auto", bottom: "80px", rotate: "rotate(-10deg)", symbol: "!", fill: "#FFE600", fs: 48 },
+                         { top: "54%", left: "auto", right: "48px", bottom: "auto", rotate: "rotate(20deg)", symbol: "{ }", fill: "#00B4FF", fs: 28 },
+
+                    ].map(({ rotate, symbol, fill, fs, ...pos }, i) => (
                          <div key={i} className="star-deco" style={{ top: pos.top, left: pos.left, right: pos.right, bottom: pos.bottom, transform: rotate }}>
                               <div style={{ animationDelay: `${i * 0.4}s`, animation: `wiggle ${2 + i * 0.3}s ease-in-out infinite` }}>
-                                   <svg width="24" height="24" viewBox="0 0 24 24">
-                                        <path d="M12 2l2.4 7H22l-6.2 4.5 2.4 7L12 16 5.8 20.5l2.4-7L2 9h7.6z" fill="#FFE66D" stroke="#111" strokeWidth="2" />
+                                   <svg width="44" height="44" viewBox="0 0 44 44">
+                                        <text x="22" y="32" textAnchor="middle" fontSize={fs} fontWeight="900"
+                                             fill={fill} stroke="#111" strokeWidth="2" paintOrder="stroke"
+                                             fontFamily="'Courier New',monospace">{symbol}</text>
                                    </svg>
                               </div>
                          </div>
