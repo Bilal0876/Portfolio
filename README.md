@@ -5,4 +5,4 @@ A modern, responsive, single-page React portfolio showcasing my skills, projects
 🔗 Live Demo
 
 View Portfolio
-https://bilal0876.github.io/Portfolio/
+[https://bilal0876.github.io/Portfolio/](https://bilal-khadim-portfolio.vercel.app/)
